@@ -1,9 +1,9 @@
 package com.github.FabioLutz2.ui;
 
-public class ConsoleUi {
+import com.github.FabioLutz2.model.SudokuBoard;
 
-    int[][] space = new int[9][9];
-    public void render() {
+public class ConsoleUi {
+    public void render(SudokuBoard board) {
         System.out.println("-------------------------");
         for (int i = 0; i < 9; i++) {
             if (i % 3 == 0 && i > 0) {
@@ -14,7 +14,7 @@ public class ConsoleUi {
                 if (j % 3 == 0 && j > 0) {
                     System.out.print("| ");
                 }
-                System.out.print(space[i][j] + " ");
+                System.out.print((board.displayValue(i, j)) + " ");
             }
             System.out.println("|");
         }
