@@ -25,4 +25,8 @@ public class SudokuBoard {
     public int displayValue(int row, int col) {
         return spaces[row][col].getActual();
     }
+
+    public boolean setValue(int row, int col, int value) {
+        return spaces[row][col].setValue(value);
+    }
 }

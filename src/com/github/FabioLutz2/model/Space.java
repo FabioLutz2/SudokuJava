@@ -24,8 +24,11 @@ public class Space {
         return actual;
     }
 
-    public void setActual(int actual) {
-        this.actual = actual;
+    public boolean setValue(int value) {
+        if (isFixed) return false;
+
+        this.actual = value;
+        return true;
     }
 
     public boolean isFixed() {
