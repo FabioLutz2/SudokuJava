@@ -29,4 +29,15 @@ public class SudokuBoard {
     public boolean setValue(int row, int col, int value) {
         return spaces[row][col].setValue(value);
     }
+
+    public boolean checkGame() {
+        for (int i = 0; i < 9; i++) {
+            for (int j = 0; j < 9; j++) {
+                if (!spaces[i][j].isCorrect()) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 }

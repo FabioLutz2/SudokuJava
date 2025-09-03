@@ -16,10 +16,6 @@ public class Space {
         }
     }
 
-    public int getExpected() {
-        return expected;
-    }
-
     public int getActual() {
         return actual;
     }
@@ -31,7 +27,7 @@ public class Space {
         return true;
     }
 
-    public boolean isFixed() {
-        return isFixed;
+    public boolean isCorrect() {
+        return actual == expected;
     }
 }

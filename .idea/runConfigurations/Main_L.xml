@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Main" type="Application" factoryName="Application">
+  <configuration default="false" name="Main L" type="Application" factoryName="Application">
     <option name="MAIN_CLASS_NAME" value="com.github.FabioLutz2.Main" />
     <module name="Sudoku" />
     <option name="PROGRAM_PARAMETERS" value="5,1;3,1;4,0;6,0;7,1;8,0;9,0;1,0;2,0;6,0;7,0;2,0;1,1;9,1;5,1;3,0;4,0;8,0;1,0;9,1;8,1;3,0;4,0;2,0;5,0;6,1;7,0;8,1;5,0;9,0;7,0;6,1;1,0;4,0;2,0;3,1;4,1;2,0;6,0;8,0;5,0;3,1;7,0;9,0;1,1;7,1;1,0;3,0;9,0;2,1;4,0;8,0;5,0;6,1;9,0;6,1;1,0;5,0;3,0;7,0;2,1;8,1;4,0;2,0;8,0;7,0;4,1;1,1;9,1;6,0;3,0;5,1;3,0;4,0;5,0;2,0;8,1;6,0;1,0;7,1;9,1" />
