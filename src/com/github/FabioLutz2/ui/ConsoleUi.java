@@ -14,7 +14,8 @@ public class ConsoleUi {
                 if (j % 3 == 0 && j > 0) {
                     System.out.print("| ");
                 }
-                System.out.print((board.displayValue(i, j)) + " ");
+                var value = board.displayValue(i, j);
+                System.out.print((value == 0 ? "." : value) + " ");
             }
             System.out.println("|");
         }
