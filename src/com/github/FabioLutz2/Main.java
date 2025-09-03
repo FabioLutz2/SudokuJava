@@ -14,14 +14,13 @@ public class Main {
         int option;
 
         while (true) {
-            System.out.println(
-                    """
-                            Selecione uma das opções:
-                            0 - Sair
-                            1 - Ver tabuleiro
-                            2 - Inserir um valor
-                            """
-            );
+            System.out.println("""
+                    Selecione uma das opções:
+                    0 - Sair
+                    1 - Ver tabuleiro
+                    2 - Inserir um valor
+                    3 - Remover um valor
+                    """);
 
             option = scanner.nextInt();
 
@@ -38,13 +37,29 @@ public class Main {
                     System.out.println("Insira o valor:");
                     var value = scanner.nextInt();
 
-                    if (row < 0 || row > 8 || col < 0 || col > 8 || value < 0 || value > 9) {
+                    if (row < 0 || row > 8 || col < 0 || col > 8 || value < 1 || value > 9) {
                         System.out.println("Valor ou posição inválidos");
                         continue;
                     }
 
                     if (!sudokuBoard.setValue(row, col, value)) {
                         System.out.println("Não foi possível definir o valor na posição desejada");
+                    }
+                }
+                case 3 -> {
+                    System.out.println("Insira a linha:");
+                    var row = scanner.nextInt() - 1;
+
+                    System.out.println("Insira a coluna:");
+                    var col = scanner.nextInt() - 1;
+
+                    if (row < 0 || row > 8 || col < 0 || col > 8) {
+                        System.out.println("Valor ou posição inválidos");
+                        continue;
+                    }
+
+                    if (!sudokuBoard.setValue(row, col, 0)) {
+                        System.out.println("Não foi possível remover o valor na posição desejada");
                     }
                 }
                 default -> System.out.println("Opção inválida");
